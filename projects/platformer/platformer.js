@@ -53,8 +53,9 @@ $(function () {
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
 
-    createCollectable("diamond", 900, 400, 20, 0.5);
-    createCollectable("diamond", 100,400, 20, 0.5);
+    createCollectable("diamond", 875, 550,);
+    createCollectable("diamond", 275,300);
+    createCollectable("diamond", 1175, 400);
 
     
     // TODO 3
@@ -64,12 +65,13 @@ $(function () {
     // example usage: createCannon(side, position, delay, width, height)
 
     createCannon("bottom", 700, 1000 );
-    createCannon("bottom", 1000, 1000) ;
-    createCannon("right", 300 , 1000);
-    createCannon("right", 200, 100);
-    createCannon("right", 100 , 100);
-    createCannon("right", 150 , 100);
-    createCannon("right", 250 , 300;
+    createCannon("bottom", 1000, 1000);
+    createCannon("bottom", 400, 1000);
+    createCannon("right", 300 , 0);
+    createCannon("right", 200, 0);
+    createCannon("right", 100 , 0);
+    createCannon("right", 150 , 0);
+    createCannon("right", 250 , 0);
     
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
