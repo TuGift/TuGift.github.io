@@ -3,7 +3,10 @@ body {
 }
 
 canvas {
-  background-color: lightblue;
+  background-color: rgb(237, 18, 18);
+  background-image: url("https://t4.ftcdn.net/jpg/04/46/59/07/360_F_446590723_lB59ianbo9z8UhIoq0n3CMPlhsZ7BeZd.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
   margin: 20px;
 }
 
