@@ -55,10 +55,10 @@ $(function () {
     // example usage: createCollectable(type, x, y, gravity, bounce)
 
     createCollectable("coin", 875, 550, 0.4 , 0.5);
-    createCollectable("diamond", 575,300, 0.4 ,0.5);
-    createCollectable("diamond", 1175, 400, 0.4 , 0.5);
-    createCollectable("diamond", 875, 300 , 0.4 , 0.5);
-    createCollectable("diamond", 1300, 300 , 0.4 ,0.5);
+    createCollectable("coin", 575,300, 0.4 ,0.5);
+    createCollectable("coin", 1175, 400, 0.4 , 0.5);
+    createCollectable("tires", 875, 300 , 0.4 , 0.5);
+    createCollectable("tires", 1300, 300 , 0.4 ,0.5);
 
     
     // TODO 3
