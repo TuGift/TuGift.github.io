@@ -76,9 +76,13 @@
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
-			function update() { if (positionX > boardWidth) {
- // then do X, Y, and Z
-}
+			function update() { 
+				if (positionX > boardWidth) {
+					speed = -speed;
+				}
+				if (positionX < 0 ) {
+					speed = -speed;
+				}
 				/* Your Code to Increase positionX by 10 HERE */
 				positionX = positionX + speed;
 				moveBoxTo(positionX);
@@ -90,10 +94,10 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				positionX = speed + 3;
-
-		// your code to increase the points variable by 1
-			points = points + 1;
+				positionX = 0;
+				speed = speed + 3;
+				// your code to increase the points variable by 1
+				points = points + 1;
 				changeBoxText(points);
 			}
 
