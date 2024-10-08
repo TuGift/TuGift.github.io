@@ -8,8 +8,9 @@ body {
     background-size: 100%;
 }
 #all-contents {
-  max-width: 800px;
+  max-width: 850px;
     margin: auto;
+    font-family:cursive;
 }
 
 /* navigation menu */
@@ -30,6 +31,7 @@ h1 {
     flex: 1;
     margin: 0;
     font-family:cursive;
+    
 }
 #nav-ul {
     list-style-image: none;
@@ -40,7 +42,10 @@ h1 {
 }
 a {
     text-decoration: none;
-    color: #fff;
+    color: white;
+    font-family:cursive;
+    font-size:20px;
+    
 }
 
 /* main container area beneath menu */
@@ -67,9 +72,9 @@ main {
 #interests {
     
     border-style:solid;
-    border: 4px rgb(242, 227, 26) ridge;
+    border: 4px rgb(0, 0, 0) ridge;
     border-radius:7px;
-    border-width:10px;
+    border-width:8px;
     padding: 8px;
 }
 h2, h3 {
