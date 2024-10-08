@@ -1,8 +1,11 @@
 body {
-    background: rgb(220, 206, 10);
+    background: rgb(0, 0, 0);
     color: rgb(5, 5, 5);
     padding: 10px;
     font-family: arial;
+    background-image: url("https://mediaassets.pca.org/pages/pca/images/content/_V2A1647_highres.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 #all-contents {
   max-width: 800px;
@@ -26,6 +29,7 @@ h1 {
     color: white;
     flex: 1;
     margin: 0;
+    font-family:cursive;
 }
 #nav-ul {
     list-style-image: none;
@@ -83,10 +87,12 @@ h2, h3 {
 }
 
 #portfolio li {
-    background: #fff;
+    background: white;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    border-style:solid;
+    border-width:5px
 }
 
 #portfolio li:hover {
@@ -95,5 +101,6 @@ h2, h3 {
 
 #portfolio a {
     text-decoration: none;
-    color: #454545;
+    color: black;
+    font-family:cursive;
 }

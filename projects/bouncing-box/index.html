@@ -9,19 +9,26 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: red;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
 			display: block;
 			position: absolute;
 			top: 100px;
+			border-style:solid;
+			border-width: 10px;
+			border-color: white;
 			/* Change me! */
 			left: 0px;
 		}
 
 		.board {
 			height: 100vh;
+			background-image: url("https://configurator.porsche.com/model/2025/992850/common/detail_I44_m_0.jpg?h=629de1a2a4344ced196a8f6bf37a5300");
+			background-repeat: no-repeat;
+  			background-size: 110%;
+			margin:20px;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -52,8 +59,9 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
+				box.css("top", newPositionY);
 			}
 
 			// changes the text displayed on the Box
@@ -69,7 +77,9 @@
 			var positionX = 0;
 			var points = 0;
 			var speed = 10;
-
+			var positionY = 0;
+			var speedY = 10;
+			var boardHeight = jQuery(window).height();
 
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -83,9 +93,16 @@
 				if (positionX < 0 ) {
 					speed = -speed;
 				}
+				if (positionY > boardHeight) {
+					speedY = -speedY;
+				}
+				if (positionY < 0 ) {
+					speedY = -speedY;
+				}
 				/* Your Code to Increase positionX by 10 HERE */
 				positionX = positionX + speed;
-				moveBoxTo(positionX);
+				positionY = positionY + speedY;
+				moveBoxTo(positionX, positionY);
 			}
 
 			/* 
@@ -95,7 +112,20 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;
+				positionY = 0;
+
+				if(speed > 0){
 				speed = speed + 3;
+				}
+				else if(speed < 0){
+				speed = speed - 3;
+				}
+				if(speedY > 0){
+				speedY = speedY + 3;
+				}
+				else if(speedY < 0){
+				speedY = speedY - 3;
+				}
 				// your code to increase the points variable by 1
 				points = points + 1;
 				changeBoxText(points);
